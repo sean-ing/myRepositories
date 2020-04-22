@@ -24,7 +24,7 @@ public class StudentController {
 	private StudentService studentServiceImpl;
 	
 	/**
-	 * ÊµÏÖĞÂÔö
+	 * Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param username
 	 * @param password
 	 * @param number
@@ -53,7 +53,7 @@ public class StudentController {
 		}
 	}
 	/**
-	 * ÊµÏÖµÇÂ¼
+	 * Êµï¿½Öµï¿½Â¼
 	 * @param username
 	 * @param password
 	 * @return
@@ -62,13 +62,13 @@ public class StudentController {
 	public String login(String username,String password) {
 		int index = studentServiceImpl.selByUsernamePwd(username, password);
 		if (index>0) {
-			return "main.jsp";
+			return "redirect:main.jsp";
 		} else {
 			return "redirect:login.jsp";
 		}
 	}
 	/**
-	 * ²éÑ¯È«²¿
+	 * ï¿½ï¿½Ñ¯È«ï¿½ï¿½
 	 * @param model
 	 * @return
 	 */
@@ -78,7 +78,7 @@ public class StudentController {
 		return "show.jsp";
 	}
 	/**
-	 * ĞŞ¸ÄÃÜÂë
+	 * ï¿½Ş¸ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param newpassword
 	 * @param username
 	 * @param password
@@ -100,7 +100,7 @@ public class StudentController {
 		}
 	}
 	/**
-	 * É¾³ıÓÃ»§
+	 * É¾ï¿½ï¿½ï¿½Ã»ï¿½
 	 * @param username
 	 * @param password
 	 * @return
